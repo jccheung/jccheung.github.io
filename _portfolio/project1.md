@@ -1,13 +1,13 @@
 ---
 title: Svelte Web Application
 subtitle: Building a full stack web application from scratch, using html/css and google firebase.
-image: "assets/img/portfolio/05-thumbnail.jpg"
+image: "assets/img/portfolio/07-thumbnail.jpg"
 alt: Web application photo
 
 caption:
   title: Svelte Web Application
   subtitle: Web Development
-  thumbnail: "assets/img/portfolio/05-thumbnail.jpg"
+  thumbnail: "assets/img/portfolio/07-thumbnail.jpg"
 ---
 
 Building a full stack web application from scratch. Using svelte, google realtime firebase and storage as well as html/css bootstrap.

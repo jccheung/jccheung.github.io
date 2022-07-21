@@ -12,7 +12,7 @@ caption:
 
 NASDAQ data set will focus on the Frankfurt Stock Exchange (FES) and analyze the stock prices of a company named Carl Zeiss Meditec, which manufactures tools for eye examinations, as well as medical lasers for laser eye surgery: https://www.zeiss.com/meditec/int/home.html. The company is listed under the stock ticker AFX_X.
 
-<img src="assets/img/portfolio/stock_data_afx.png" alt="Stock data json " width="600"><br/>
+<img src="assets/img/portfolio/stock_data_afx.png" alt="Stock data json " width="700"><br/>
 Stock data output return as a JSON
 
 Simple Exploratory data analysis was conducted, answering simple questions like: What is the highest and lowest opening prices of stocks within a certain time period? What is the largest change in a single day?

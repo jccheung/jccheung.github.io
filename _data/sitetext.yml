@@ -50,7 +50,7 @@ en: &DEFAULT_EN
         icon: "fa fa-envelope"
       - url: https://linkedin.com
         icon: "fab fa-linkedin-in"
-      - url: https://github.com/raviriley/agency-jekyll-theme
+      - url: https://github.com/jccheung
         icon: "fab fa-github"
     
 
