@@ -67,9 +67,4 @@ en-GB:
 en-AU:
   <<: *DEFAULT_EN
 
-# Spanish
 
-es-ES:
-  <<: *DEFAULT_ES
-es-CO:
-  <<: *DEFAULT_ES
