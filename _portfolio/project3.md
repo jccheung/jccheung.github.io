@@ -11,9 +11,18 @@ caption:
 ---
 
 Analyze and devise a data pipeline for data coming from onsite reasearchers.
-                                    Create and organize a SQL database for ease of use of data coming and prepare the data via cleaning and augmentation for advanced analytical techniques. Multiple tables using weather data, HVAC tables with data such as air intake temperatures, humidity and energy usage.
+Create and organize a SQL database for ease of use of data coming and prepare the data via cleaning and augmentation for advanced analytical techniques. Multiple tables using weather data, HVAC tables with data such as air intake temperatures, humidity and energy usage.
 
 This project consisted of a using python to develop some scripts for simple exploratory data analysis (EDA). 
+
+<img src="assets/img/portfolio/excel_png.png" alt="Excel view images" width="700"><br/>
+Excel sample view of the data
+
+<img src="assets/img/portfolio/fuel_heating_degree.png" alt="Heating degrees days vs gas consumption" width="400"><br/>
+Heating degrees days vs Gas consumption
+
+<img src="assets/img/portfolio/gas_outside_temp.png" alt="Gas consumption vs Outside temperature" width="400"><br/>
+Gas consumption vs Outside temperature
 
 <b>Libraries:</b>
 Some of the tools required to make this project work: 

@@ -24,11 +24,13 @@ Unet Architecture
 More details about the model can be found in the paper.
 
 
-Research Project Final paper:
-
+Research Project Final paper: 
 <a href="assets/resu/EE8204_Final_Report.pdf" download="">
   <img src="assets/img/download_icon.png" style="width:60px; height:60px;">
 </a>
+
+<embed src="assets/resu/EE8204_Final_Report.pdf" type="application/pdf" class="col-lg-12" width="600" height="800" />
+        
 
 <b>Libraries:</b>
 Some of the tools required to make this project work: 
