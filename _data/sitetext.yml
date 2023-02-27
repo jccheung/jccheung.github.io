@@ -19,7 +19,7 @@ en: &DEFAULT_EN
 
   portfolio:
     title: "Portfolio"
-    text: "Feel free to take a look at some projects I have worked on."
+    text: "Check out some of the projects I have worked on."
     section: portfolio
     closebutton: "Close Project"
 
@@ -27,18 +27,16 @@ en: &DEFAULT_EN
   about:
     title: "About Me"
     text: "I am Jeremy Cheung and I am a Machine Learning Developer based in Toronto, Ontario."
-    body: "I am currently a Machine Learning Developer and have worked all across the machine learning pipeline ranging from computer vision, data science and also image processing. In my studies I am a Mechanical Engineering Masters Graduate student at the Toronto Metropolitian University (Ryerson University) where my focus is on Applied Machine Learning specializing in Heating, Ventilation and Air Conditioning (HVAC) applications."
+    body: "I am currently a Machine Learning Developer and have worked all across the machine learning pipeline ranging from deep learning, data science and computer vision. I graduated from my Mechanical Engineering Masters Degree at the Toronto Metropolitian University (previously known as Ryerson University) where my focus was on Applied Machine Learning specializing in Prediction of Wind and Solar Power Output using Deep Learning Networks. I am currently seeking new opportunities regarding Machine Learning and Data Science."
     subtitle: "What have I worked on?"
-    subpoint1: "Clean and analyze real world data to find trends and anomalies"
-    subpoint2: "Design and refine machine learning models for computer vision, quality assurance using Azure and AWS"
-    subpoint3: "Manage machine learning data pipelines from data collection, to data augmentation and machine learning training"
-    subpoint4: "Intergrated machine learning into full stack web applications using HTML and CSS"
+    subpoint1: "Deep learning model development for renewable energy, specifically time series analysis prediction for clean energy"
+    subpoint2: "Development and refinement of computer vision models for determining paint stroke similiarities, using OpenCV"
+    subpoint3: "Manage data pipelines from data scraping using BeautifulSoup and Scrapy, to relational database management using SQL, to data augmentation and preprocessing using Python Numpy and Pandas libraries"
+    subpoint4: "Integrated machine learning into full stack web applications using HTML and CSS"
 
   resume:
     title: "My Resume"
-    text: "Resume Download Click Here:"
-    subtext: 
-    section: team
+    section: resume
     
 
   contact:

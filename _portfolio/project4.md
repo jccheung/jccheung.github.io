@@ -1,40 +1,91 @@
 ---
-title: UNet Image Segmentation
-subtitle: Academic Research Project utilizing unet algorithm to conduct image segmentation aganist traffic light data
-image: "assets/img/portfolio/03-thumbnail.jpg"
-alt: Camera photo
+title: Dog Breed Identification
+subtitle: Prediction and Detection of Different Dog Classes
+image: "assets/img/portfolio/01-thumbnail.jpg"
+alt: Dog Image
 
 caption:
-  title: UNet Image Segmentation
-  subtitle: Machine Learning
-  thumbnail: "assets/img/portfolio/03-thumbnail.jpg"
+  title: Dog Breed Identification
+  subtitle: Computer Vision
+  thumbnail: "assets/img/portfolio/01-thumbnail.jpg"
 ---
-This paper advances and builds on existing knowledge to introduce a novel solution with an already existing algorithm for detecting a traffic sign and estimate the boundary within and input image. Estimating the boundary of traffic signs within an image and classification of a shape class prediction, solved using a CNN. The proposed algorithm and method using a U-Net CNN is compared aganist existing CNN methods in terms of computational time, and accuracy of detection.
 
-<img src="assets/img/portfolio/unet_result.png" alt="Traffic Sign Image Segmentation" width="600"><br/>
-Traffic Sign Image Segmentation
+<style> 
+.noPadding { 
+  margin: 0px !important;
+  border: 0px solid brown; 
+} 
+</style> 
+Image classification has many excellent datasets for determining all types of classes, from humans, to airplanes to cats. VOC2012, a competition known as the Visual Object Classes Challenge to build a image database that has 20 clases ranging from persons, animals, vehicles and indoor furnitures. There is a classification for dogs, but not for dogs, so building upon this competition I wanted to train my own model to predict dog breeds.
+<br />
+<br />
+This paper is built off of <a href ="https://arxiv.org/abs/1506.01497">[R-CNN: Towards Real-Time Object Detection with Region Proposal Networks] </a>written in PyTorch to determine the bounding boxes and prediction values for the dog breeds. 
+<br />
+<br />
+<h5>Some questions that needed to be answered were:</h5>
 
-Utilizing the UNet algorithm that is traditionally used for Medical Imaging, and utilizing it for image segmentation of traffic sign data. The Data sets were gathered from Kaggle opensource datasets and the training was done off a jupyter notebook.
+1. How many dog breeds are trained? <br>
+2. How is the data stored and organized, how are the features extracted. <br>
 
-The model was trained using tensorflow, building the model and tweaking the model configurations to maxmize model performance. I utilizied a Rectified Linear Unit Activation (ReLu) in between Convolution layers then trained for only 30 epochs as the model would reach reach maximum accuracy relatively quickly. 
+<br>
+The dataset used was collected from the <a href ="http://vision.stanford.edu/aditya86/ImageNetDogs/main.html">[Stanford Dogs Dataset] </a>with total of 120 categories, with annotations for class labels and bounding boxes in PASCAL VOC format. This meant the data needed to be in XML and JPG files like the following. 
+<br />
+<br />
 
-<img src="assets/img/portfolio/unet_architecture.png" alt="UNet Model Architecture" width="600"><br/>
-Unet Architecture
+<figure style="text-align: center">
+<img src="assets/img/portfolio/file_direc.jpg" alt="Comparing data folders" width="700" class="noPadding"> 
+ <figcaption style="text-align: center"><em>Data Directory style</em>
+ </figcaption>
+</figure>
 
-More details about the model can be found in the paper.
+For each image, there is an XML file that defines the size of the image, the class name as well as the bounding box location.
+<br />
+<br />
+<figure style="text-align: center">
+<img src="assets/img/portfolio/XML_file.jpg" alt="xml file contents" width="500" class="noPadding"> 
+  <figcaption>
+    <em>XML file contents, notice the coordinates xmin, xmax and ymin, ymax showing the coordinates of the bounding boxes </em>
+  </figcaption>
+</figure>
+The data was then run through simple preprocessing morphological operations such as rotating, shifting as well as mirroring the images, to increase the size of the dataset and provide the algorithm with even more input data.
+<br />
+<br />
+The machine learning algorithm is trained with the new dog breed classes and is compiled to learn and write the bounding boxes as an output. Postman is used as the testing and API call as it is upload to a localhost web server to try to receive POST calls from the server. 
+<br />
+<br />
+<figure style="text-align: center">
+<img src="assets/img/portfolio/terminal.png" alt="local terminal" width="700" class="noPadding">
+  <figcaption>
+    <em>Localhost</em>
+  </figcaption>
+</figure>
 
+<figure style="text-align: center">
+<img src="assets/img/portfolio/start_up_border.JPG" alt="Webpage start" width="700" class="noPadding">
+<figcaption>
+    <em>Webpage startup</em>
+  </figcaption>
+</figure>
 
-Research Project Final paper: 
-<a href="assets/resu/EE8204_Final_Report.pdf" download="">
-  <img src="assets/img/download_icon.png" style="width:60px; height:60px;">
-</a>
+<br />
+Here we can see the output result, the dog breed, as well as the prediction result in a tensor. The algorithm is 75% certain that this is an image of a Tibetan Mastiff, which is correct. This project was a demonstration of creating and replicated an algorithm from a journal article, as well as usage of an API platform for building a machine learning API in the future. 
+<br>
 
-<embed src="assets/resu/EE8204_Final_Report.pdf" type="application/pdf" class="col-lg-12" width="600" height="800" />
-        
+<figure style="text-align: center;">
+<img src="assets/img/portfolio/output.png" alt="Output Example" width="700" class="noPadding"> <figcaption>
+    <em>Sad looking doggo</em>
+  </figcaption>
+</figure>
 
-<b>Libraries:</b>
+<br />
+Additional work would be to include much more dog classes to the algorithm for training as well as work on the accuracy of the model to have higher certainty of the prediction. In addition, making the webpage look alittle better than a blank page with text. The github will continue to be updated to make these changes.
+<br />
+<br />
+<br />
+<h4>Libraries:</h4>
 Some of the tools required to make this project work: 
-
-<a href="https://www.mysql.com/">MySQL</a> - MySQL is a domain-specific language used in programming and designed for managing data held in a relational database management system. <br>
-<a href="https://www.tensorflow.org/">TensorFlow</a> - TensorFlow is a free and open-source software library for machine learning and artificial intelligence. It can be used across a range of tasks but has a particular focus on training and inference of deep neural networks <br>
+<br>
+<a href="https://pypi.org/project/opencv-python/">OpenCV2</a> - An open source computer vision and machine learning software library.<br>
+<a href="https://scikit-learn.org/stable/">Scikit-Learn</a> - An open source Machine learning library in python used for data preprocessing, classification, regression, etc... <br>
+<a href="https://www.postman.com/">Postman</a> - Postman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and streamlines collaboration <br>
 <a href="https://jupyter.org/">Jupyter Notebooks</a> - web-based interactive development environment for notebooks, code, and data.<br>

@@ -6,6 +6,7 @@ body {
 
 p {
   line-height: 1.75;
+  font-size:larger;
 }
 
 a {
@@ -16,6 +17,7 @@ a {
 }
 
 .text-primary {
+  font-size:larger;
   color: $primary !important;
 }
 
@@ -25,6 +27,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-size:larger;
   font-weight: 700;
   @include heading-font;
 }

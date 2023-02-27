@@ -16,9 +16,9 @@
 url    : "https://jccheung.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 
-title      : Jeremy Cheung Personal Portfolio
+title      : jccheung.github.io
 email      : jeremycheungwork@gmail.com #this is also the email contact forms will go to
-description: "Jeremy Cheung Personal Portfolio"
+description: "jccheung.github.io"
 author     : Jeremy Cheung
 # logo:     #optional, defaults to site title
   # path: assets\img\clients\creative-market.jpg
