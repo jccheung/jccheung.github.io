@@ -40,9 +40,10 @@ The dataset used was collected from the <a href ="https://www.ieso.ca/">[Indepen
 The dataset made up of approximately 50 meteorological features total over a 4 year time period. Notable features such as wind speed, solar radiation, air temperature, dew point temperature and humidity all played a role in determining total solar and wind power generation capacity.
 <br />
 <br />
+
 <figure style="text-align: center">
-<img src="assets/img/portfolio/model_lifecycle.jpg" alt="model_life contents" width="500" class="noPadding"> 
-  <figcaption>
+<img src="assets/img/portfolio/model_lifecycle.JPG" alt="model_life contents" width="500" class="noPadding"> 
+  <figcaption style="text-align: center">
     <em>Model lifecycle utilized in this project </em>
   </figcaption>
 </figure>

@@ -33,7 +33,7 @@ The dataset used was collected from the <a href ="http://vision.stanford.edu/adi
 <br />
 
 <figure style="text-align: center">
-<img src="assets/img/portfolio/file_direc.jpg" alt="Comparing data folders" width="700" class="noPadding"> 
+<img src="assets/img/portfolio/file_direc.JPG" alt="Comparing data folders" width="700" class="noPadding"> 
  <figcaption style="text-align: center"><em>Data Directory style</em>
  </figcaption>
 </figure>
@@ -41,21 +41,24 @@ The dataset used was collected from the <a href ="http://vision.stanford.edu/adi
 For each image, there is an XML file that defines the size of the image, the class name as well as the bounding box location.
 <br />
 <br />
+
 <figure style="text-align: center">
-<img src="assets/img/portfolio/XML_file.jpg" alt="xml file contents" width="500" class="noPadding"> 
-  <figcaption>
+<img src="assets/img/portfolio/XML_file.JPG" alt="xml file contents" width="500" class="noPadding"> 
+  <figcaption style="text-align: center">
     <em>XML file contents, notice the coordinates xmin, xmax and ymin, ymax showing the coordinates of the bounding boxes </em>
   </figcaption>
 </figure>
+
 The data was then run through simple preprocessing morphological operations such as rotating, shifting as well as mirroring the images, to increase the size of the dataset and provide the algorithm with even more input data.
 <br />
 <br />
 The machine learning algorithm is trained with the new dog breed classes and is compiled to learn and write the bounding boxes as an output. Postman is used as the testing and API call as it is upload to a localhost web server to try to receive POST calls from the server. 
 <br />
 <br />
+
 <figure style="text-align: center">
 <img src="assets/img/portfolio/terminal.png" alt="local terminal" width="700" class="noPadding">
-  <figcaption>
+  <figcaption  style="text-align: center">
     <em>Localhost</em>
   </figcaption>
 </figure>

@@ -21,7 +21,7 @@ This paper advances and builds on existing knowledge to introduce a novel soluti
 
 <figure style="text-align: center">
 <img src="assets/img/portfolio/unet_result.png" alt="Traffic Sign Image Segmentation" width="600" class="noPadding">
-<figcaption>
+<figcaption style="text-align: center">
     <em> Traffic Sign Image Segmentation</em>
   </figcaption>
 </figure>
@@ -32,11 +32,9 @@ Utilizing the UNet algorithm that is traditionally used for Medical Imaging, and
 The model was trained using tensorflow, building the model and tweaking the model configurations to maxmize model performance. I utilizied a Rectified Linear Unit Activation (ReLu) in between Convolution layers then trained for only 30 epochs as the model would reach reach maximum accuracy relatively quickly. 
 
 <figure style="text-align: center">
-
 <img src="assets/img/portfolio/unet_architecture.png" alt="UNet Model Architecture" width="600" class="noPadding">
-
-<figcaption>
-    <em> Unet Architecture</em>
+<figcaption style="text-align: center">
+    <em> Unet Architecture </em>
   </figcaption>
 </figure>
 
