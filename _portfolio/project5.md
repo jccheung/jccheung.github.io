@@ -18,7 +18,7 @@ caption:
 NASDAQ data set will focus on the Frankfurt Stock Exchange (FES) and analyze the stock prices of a company named Carl Zeiss Meditec, which manufactures tools for eye examinations, as well as medical lasers for laser eye surgery: https://www.zeiss.com/meditec/int/home.html. The company is listed under the stock ticker AFX_X.
 
 <figure style="text-align: center">
-<img src="assets/img/portfolio/stock_data_afx.png" alt="Stock data json " width="700" class="noPadding">
+<img src="assets/img/portfolio/stock_data_afx.PNG" alt="Stock data json " width="700" class="noPadding">
 <figcaption>
     <em> Stock data output return as a JSON</em>
   </figcaption>
