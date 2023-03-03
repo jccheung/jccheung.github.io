@@ -20,7 +20,7 @@ caption:
 This paper advances and builds on existing knowledge to introduce a novel solution with an already existing algorithm for detecting a traffic sign and estimate the boundary within and input image. Estimating the boundary of traffic signs within an image and classification of a shape class prediction, solved using a CNN. The proposed algorithm and method using a U-Net CNN is compared aganist existing CNN methods in terms of computational time, and accuracy of detection.
 
 <figure style="text-align: center">
-<img src="assets/img/portfolio/unet_result.png" alt="Traffic Sign Image Segmentation" width="600" class="noPadding">
+<img src="../assets/img/portfolio/unet_result.png" alt="Traffic Sign Image Segmentation" width="600" class="noPadding">
 <figcaption style="text-align: center">
     <em> Traffic Sign Image Segmentation</em>
   </figcaption>

@@ -28,6 +28,7 @@ This paper was written for completion of my Masters major research project under
 1. Can all of Ontario's power demands be met with renewable energy? <br>
 2. What are the key features for determining renewable energy? <br>
 3. What would be the best algorithm choice to predict renewable energy? <br>
+
 <figure style="text-align: center">
 <img src="assets/img/portfolio/month_bar_electricity.png" alt="Comparing electricity per month" width="700" class="noPadding"> 
  <figcaption style="text-align: center"><em>Data Directory style</em>
