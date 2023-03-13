@@ -17,6 +17,8 @@ en: &DEFAULT_EN
       section: portfolio
     - title: "Resume"
       section: resume
+    - title: "Certifications"
+      section: creds
     - title: "Email"
       url: "mailto:jeremycheungwork@gmail.com"
     - title: "Github"
