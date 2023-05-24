@@ -37,7 +37,10 @@ en: &DEFAULT_EN
   resume:
     title: "My Resume"
     section: resume
-    
+  
+  credentials:
+    title: "My Certifications"
+    section: creds
 
   contact:
     title: "Contact Me"

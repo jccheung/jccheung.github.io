@@ -1,13 +1,13 @@
 ---
-title: Robotic Painting Quality Control
-subtitle: How do you tell if two paintings are the same? 
-image: "assets/img/portfolio/compare_mona.jpg"
-alt: Paint picture
+title: Climate Policy Vector Database
+subtitle: Vector Embeddings for climate policy legislation
+image: "assets/img/portfolio/climatepolicy.jpg"
+alt: Solar Image
 
 caption:
-  title: Computer Vision Painting
-  subtitle: Computer Vision
-  thumbnail: "assets/img/portfolio/compare_mona.jpg"
+  title: Climate Policy Vector Database
+  subtitle: Vector Database
+  thumbnail: "assets/img/portfolio/climatepolicy.jpg"
 ---
 
 <style> 
@@ -16,67 +16,178 @@ caption:
   border: 0px solid brown; 
 } 
 </style> 
+Vector embeddings are essentially converting text or other forms of unstructured data such as audio and images into a high dimension matrix. This high dimensional space is known as an embedding, and can be used to increase the speed and accuracy of search results, as compared to semantic search. In a vector database, queries that have similarities are put together based on similarity, just like K nearest neighbours which makes them much faster to find compared to relational databases. With the ongoing development of technologies such as ChatGPT and other Large Language Models, there is an increasing need for an upgrade from the data base side to match the speed of the models. The enormous number of attributes and features that the model has to draw insights for is endless and take time and computing power to query searches. To solve this issue, using a specialized database that can provide a vector embedding and essentially group the data by semantic meaning, like a K nearest neighbour vector match to draw insights quickly and more accurately than a semantic database.
 
-Museum curators spend millions of dollars every where to determine fake paintings from the real ones. <a href="https://news.harvard.edu/gazette/story/2017/06/teaching-tomorrows-curators-how-to-spot-a-fake/"> Teaching curators to spot fake paintings</a> and determine real stroke marks has always been a major challenge even with carbon dating. Utilizing computer vision to devise a method to compare painting stroke types or to perform some preliminary sweeps before a human will need to go in and look at the paintings, similar to applicant tracking systems and filtering resumes and cover letters before they are ever seen by a real person.
-
-<h5>Some questions that needed to be answered were:</h5> 
-1. Are there methods to infer what paint brush was used for a specific paint stroke? 
-2. What is the best way to tell between two brush strokes with the exact same colour, and the exact same brush?
-
-Starting with creating a pipeline to set up data base and data segmentation. Developing a dataset of paintings and individual paint strokes for comparison.
-<figure style="text-align: center;">
-<img src="assets/img/portfolio/compare_mona.jpg" alt="Comparing paintings" width="700" class="noPadding"><figcaption>
-    <em> How do you tell if a painting is the same?</em>
-  </figcaption>
-</figure>
-
-                                    
-Multiple comparison scores are developed using OpenCV2. Colour matching, skeletoning, and texture detection are all run through the library to compare two paint strokes. Produced visual reports and comparison data to give an overall score on painting stroke types.
-
-Skeletionization of stroke types using basic morphological operations
-<figure style="text-align: center;">
-<img src="assets/img/portfolio/skeleton_border.png" alt="Skeletonization Example" width="700"  class="noPadding"> <figcaption>
-    <em>Example of skeletonization</em>
-  </figcaption>
-</figure>
-
-Performing thresholding, first converting an image to grayscale then into a binary image. Choosing a specific threshold, and pixels with values greater than the threshold will be white (255), and similar will be converted to black (0).
-
-<figure style="text-align: center;">
-<img src="assets/img/portfolio/thresholding.png" alt="Thresholding Example" width="700" class="noPadding"> <figcaption>
-    <em>Example of thresholding</em>
-  </figcaption>
-</figure>
-
-With thresholding only, there are parts of the image that might not be what we are looking for. In the example above notice that there are pixels between the cell images that we are not interested in. To remove these unwanted pixels, running basic morphological operations on the thresholded images.
-
-<h5>Dilating and Erosion:</h5>
-Dilating adds pixels to the boundaries of objects while erosion removes pixels on the object boundaries.
-
-<figure style="text-align: center;">
-<img src="assets/img/portfolio/dilation.png" alt="Dilation Example" width="500" class="noPadding"><figcaption>
-    <em>Example of Dilation</em>
-  </figcaption>
-</figure> 
-
-<figure style="text-align: center;">
-<img src="assets/img/portfolio/erosion.png" alt="Erosion Example" width="500" class="noPadding"><figcaption>
-    <em>  Example of Erosion</em>
-  </figcaption>
-</figure>
-
-Performing simple morphological operations after thresholding to get skeletonized images of paint strokes. Then running comparison of the skeletonized images by pixel values to compare paint strokes.
-
-This was one of the many techniques used to compare images. Multiple additional processes done to compare the strokes provided a numerical percentage value of likeness. The full repository is private for company usage but this was simply an example of the operatons completed.
-
-Potential future work is the utilization of GANs to create and mimic the paintings, then have the algorithm compare between the original paining the GAN created painting.
 
 <br />
 <br />
+This project utilized the Climate policy radar database, which consisted of over 4000+ policies and papers that were written regarding climate. 
+
+<figure style="text-align: center">
+<img src="assets/img/portfolio/climatepolicy.jpg" alt="Climate Policy Radar" width="300" class="noPadding"> 
+
+ <figcaption style="text-align: center"><em>climate policy radar</em>
+ </figcaption>
+
+</figure>
+
+As a researcher for example, almost always when you have a thesis or journal paper or novel idea, then you have to find background articles, papers that other people wrote that are similar but not exactly the same. This can be difficult to find as your idea is novel and assuming you are the first one to write a paper about it, it would not show up on a typical search engine, This is where vector embedded search comes in, if you were to search your paper details, you would be able to find the 10+ journal papers that have the relative closeness of your paper, and reference them much faster. 
+
+
+<h3 size="1"> Objectives</h3>
+* Build a database based on the Climate Radar Policy 
+* Create vector embeddings for the climate radar policy features
+* Write a python flask search application to query and display results back to users
+
+<br />
+
+<b style="font-size:larger">Method </b>
+<figure style="text-align: center">
+<img src="assets/img/portfolio/climatepolicy.jpg" alt="Climate Policy Radar" width="300" class="noPadding"> 
+
+ <figcaption style="text-align: center"><em>climate policy radar</em>
+ </figcaption>
+</figure>
+It was written in Python, using Docker with Weaviate and other supporting libraries.
+
+<br />
+A docker container was created for all its dependencies. The dataset used was collected from the <a href ="https://app.climatepolicyradar.org/">[Climate Policy Radar] </a> <br/>
+
+The dataset made up of approximately 4000+ journals, laws and papers totaled over a 4 year time period. Notable features include, name, summary, category, sector, language, country of origin and outcome of the policy. 
+
+<pre><code>
+class_obj = {
+        "class": "Article",
+        "description": "Information regarding Climate Policy",
+        "properties": [
+            {
+            "name": "Document_title",
+            "dataType": ["string"],
+            "description": "Document Title",
+            },
+            {
+            "name": "Family_summary",
+            "dataType": ["string"],
+            "description": "Document Summary",
+            },
+            {
+            "name": "Category",
+            "dataType": ["string"],
+            "description": "Document Category",
+            },
+            {
+            "name": "Sectors",
+            "dataType": ["string"],
+            "description": "Document Sector Topics",
+            },
+            {
+            "name": "Keywords",
+            "dataType": ["string"],
+            "description": "Document Multiple Keywords",
+            },
+            {
+            "name": "Responses",
+            "dataType": ["string"],
+            "description": "Document Publish Response",
+            },
+            {
+            "name": "Language",
+            "dataType": ["string"],
+            "description": "Written Language",
+            },
+            {
+            "name": "Geography",
+            "dataType": ["string"],
+            "description": "Country of Origin",
+            }
+        ]
+    }
+</code></pre>
+<br />
+<br />
+<figure style="text-align: center">
+<img src="assets/img/portfolio/schema.JPG" alt="Created Schema" width="1000" class="noPadding"> 
+  <figcaption style="text-align: center">
+    <em>Schema that defines the data </em>
+  </figcaption>
+</figure>
+
+The data was then run through exploratory data analysis: simple data cleaning and text organizing then uploaded to the schema as well.
+
+
+
+<b style="font-size:larger">Flask application </b>
+<br />
+
+The flask application is connected to the Weaviate Client.
+<figure style="text-align: center">
+<img src="assets/img/portfolio/localhost.jpg" alt="localhost" width="700" class="noPadding">
+  <figcaption>
+    <em>Local Host  </em>
+  </figcaption>
+</figure>
+<br />
+<br />
+Here the ```Weaviate nearText``` operator is used, to search for text that has the closest semantic meanings to the query that the user searched for. The response from the search query will include the closest objects in the climate policy class. The output response is then taken as the name, summary and details of the selected journal article.
+<br>
+<figure style="text-align: center">
+<img src="assets/img/portfolio/neartext.jpg" alt="NearText function" width="700" class="noPadding">
+  <figcaption>
+    <em>NearText weaviate</em>
+  </figcaption>
+</figure>
+<br />
+<br />
+Lastly the flask app front end and back end is created. Firstly the backend for POST requests from Weaviate is created and the search function to return the results from the client and render the page.<br />
+
+<figure style="text-align: center;">
+<img src="assets/img/portfolio/routehtml.jpg" alt="Populate Home page" width="700" class="noPadding"> <figcaption>
+    <em>Populate homepage</em>
+  </figcaption>
+</figure>
+
+The index.html file
+<figure style="text-align: center;">
+<img src="assets/img/portfolio/index.jpg" alt="Home index page" width="700" class="noPadding"> <figcaption>
+    <em>Home index page html</em>
+  </figcaption>
+</figure>
+
+<br />
+The search results.html file
+<figure style="text-align: center;">
+<img src="assets/img/portfolio/searchresults.jpg" alt="Search results page" width="700" class="noPadding"> <figcaption>
+    <em>Search results page html</em>
+  </figcaption>
+</figure>
+<br />
+<br />
+
+The final website functionality
+<figure style="text-align: center;">
+<img src="assets/img/portfolio/coalemissions.jpg" alt="Search page" width="900" class="noPadding"> <figcaption>
+    <em>Home page</em>
+  </figcaption>
+</figure>
+<br />
+<br />
+
+With relative ease of use, I have created a fully functional vector embedded search engine, for any database files.
+<figure style="text-align: center;">
+<img src="assets/img/portfolio/coalsearch.jpg" alt="Search result page" width="1000" class="noPadding"> <figcaption>
+    <em>Search results page</em>
+  </figcaption>
+</figure>
+<br />
+<br />
+
+This application is not limited to climate policy radar search engine data, the possibilities such as finding shoes that are similar to the ones you own, finding animals that look alike each other. The extensive possibilities for these technologoies with large language models such as chatGPT make it endless.
+
 <h4>Libraries:</h4>
 Some of the tools required to make this project work: 
 <br>
-<a href="https://pypi.org/project/opencv-python/">OpenCV2</a> - An open source computer vision and machine learning software library.<br>
-<a href="https://scikit-learn.org/stable/">Scikit-Learn</a> - An open source Machine learning library in python used for data preprocessing, classification, regression, etc... <br>
-<a href="https://jupyter.org/">Jupyter Notebooks</a> - web-based interactive development environment for notebooks, code, and data.<br>
-                                    
+<a href="https://www.python.org/">Python</a> - Python is a programming language that lets you work quickly and integrate systems more effectively.<br>
+<a href="https://scikit-learn.org/stable/">Weaviate</a> - Weaviate is an open-source vector database. It allows you to store data objects and vector embeddings from your favorite ML-models, and scale seamlessly into billions of data objects.<br>
+<a href="https://pandas.pydata.org/">Docker</a> - Docker is a platform designed to help developers build, share, and run modern applications.<br>
+
+

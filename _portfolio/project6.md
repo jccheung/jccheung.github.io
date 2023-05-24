@@ -1,13 +1,13 @@
 ---
-title: Svelte Web Application
-subtitle: Building a full stack web application from scratch, using html/css and google firebase.
-image: "assets/img/portfolio/07-thumbnail.jpg"
-alt: Web application photo
+title: NASDAQ Stock API Tracker
+subtitle: Utilizing NASDAQ API to collect data on specific stock markets and specific companies, then perform simple elementary analysis on the json data
+image: "assets/img/portfolio/05-thumbnail.jpg"
+alt: Stock Photo
 
 caption:
-  title: Svelte Web Application
-  subtitle: Web Development
-  thumbnail: "assets/img/portfolio/07-thumbnail.jpg"
+  title: NASDAQ Stock API Tracker
+  subtitle: Data Science
+  thumbnail: "assets/img/portfolio/05-thumbnail.jpg"
 ---
 <style> 
 .noPadding { 
@@ -15,44 +15,50 @@ caption:
   border: 0px solid brown; 
 } 
 </style>
-Building a full stack web application from scratch. Using svelte, google realtime firebase and storage as well as html/css bootstrap.
-
-<em>Please note that the screenshots shown are limited to protect IP of the company.</em>
-
-Working closely with a graphic designer for the Front End, I designed the website based on graphics and figma file provided to me by the graphic designer. Multiple iterations of the desing of the website was required in order to get the website to look as intended.
-
+NASDAQ data set will focus on the Frankfurt Stock Exchange (FES) and analyze the stock prices of a company named Carl Zeiss Meditec, which manufactures tools for eye examinations, as well as medical lasers for laser eye surgery: https://www.zeiss.com/meditec/int/home.html. The company is listed under the stock ticker AFX_X.
 
 <figure style="text-align: center">
-<img src="assets/img/portfolio/example_form.png" alt="Figma sketch" width="600" class="noPadding">
+<img src="assets/img/portfolio/stock_data_afx.PNG" alt="Stock data json " width="700" class="noPadding">
 <figcaption>
-    <em> Example Form on Live Website</em>
+    <em> Stock data output return as a JSON</em>
   </figcaption>
 </figure>
 
-For the backend, utilizing a realtime database to populate and dynamically update the web application, based on a unique identifier to search from the database.
-
 <figure style="text-align: center">
-<img src="assets/img/portfolio/form_data.png" alt="Google firebase live" width="700" class="noPadding">
+<img src="assets/img/portfolio/open_tick_price.png" alt="Stock data Tick Opening Price" width="300" class="noPadding">
 <figcaption>
-    <em> Read and Write directly to/from realtime google firebase</em>
+    <em> Stock Open Price</em>
   </figcaption>
 </figure>
 
-The website would then take the data and display it according to the corresponding unique identifier, dynamically updating and returning a 404 page if the entry was not found in the data base.
 
-<br />
+Simple Exploratory data analysis was conducted, answering simple questions like: 
+<br/>
+What is the highest and lowest opening prices of stocks within a certain time period?
+
+<figure style="text-align: center">
+<img src="assets/img/portfolio/maxminprice.png" alt="Maximum and minimum opening price" width="300" class="noPadding">
+<figcaption>
+    <em> What is the largest change in a single day?</em>
+  </figcaption>
+</figure>
+
+<figure style="text-align: center">
+<img src="assets/img/portfolio/changeprice.png" alt="Maximum change price per day" width="400" class="noPadding">
+<figcaption>
+    <em> This data preprocessing exercise can be the foundation for a more complex machine learning pipeline or system.  
+</em>
+  </figcaption>
+</figure>
 
 To be completed...
+
+More details about the data preprocessing can be found in the public github: <a href="https://github.com/jccheung/nasdaq-stock-api-tracker-miniproject">Github Project Link</a>
+
+<br />
 <br />
 <h4>Libraries:</h4>
 Some of the tools required to make this project work: 
 <br>
-<a href="https://svelte.dev/">Svelte</a> - Svelte is a free and open-source front end compiler for ease of use of HTML and CSS.<br>
-<a href="https://getbootstrap.com/">Bootstrap</a> - Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains HTML, CSS and JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components<br>
-<a href="https://www.figma.com/">Figma </a> - Figma is a collaborative browser-based interface design tool, with additional offline features enabled by desktop applications for macOS and Windows. <br>
-
-{:.list-inline}
-
-
-- Acrylic Robotics
-- Web Development
+<a href="https://pypi.org/project/requests/">Python GET requests</a> - Python Requests GET API Methods <br>
+<a href="https://jupyter.org/">Jupyter Notebooks</a> - web-based interactive development environment for notebooks, code, and data.<br>
