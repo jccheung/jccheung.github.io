@@ -1,13 +1,13 @@
 ---
 title: Climate Policy Vector Database
 subtitle: Vector Embeddings for climate policy legislation
-image: "assets/img/portfolio/climatepolicy.jpg"
+image: "assets/img/portfolio/climatepolicy.JPG"
 alt: Solar Image
 
 caption:
   title: Climate Policy Vector Database
   subtitle: Vector Database
-  thumbnail: "assets/img/portfolio/climatepolicy.jpg"
+  thumbnail: "assets/img/portfolio/climatepolicy.JPG"
 ---
 
 <style> 
@@ -24,7 +24,7 @@ Vector embeddings are essentially converting text or other forms of unstructured
 This project utilized the Climate policy radar database, which consisted of over 4000+ policies and papers that were written regarding climate. 
 
 <figure style="text-align: center">
-<img src="assets/img/portfolio/climatepolicy.jpg" alt="Climate Policy Radar" width="300" class="noPadding"> 
+<img src="assets/img/portfolio/climatepolicy.JPG" alt="Climate Policy Radar" width="300" class="noPadding"> 
 
  <figcaption style="text-align: center"><em>climate policy radar</em>
  </figcaption>
@@ -43,7 +43,7 @@ As a researcher for example, almost always when you have a thesis or journal pap
 
 <b style="font-size:larger">Method </b>
 <figure style="text-align: center">
-<img src="assets/img/portfolio/climatepolicy.jpg" alt="Climate Policy Radar" width="300" class="noPadding"> 
+<img src="assets/img/portfolio/climatepolicy.JPG" alt="Climate Policy Radar" width="300" class="noPadding"> 
 
  <figcaption style="text-align: center"><em>climate policy radar</em>
  </figcaption>
@@ -121,7 +121,7 @@ The data was then run through exploratory data analysis: simple data cleaning an
 
 The flask application is connected to the Weaviate Client.
 <figure style="text-align: center">
-<img src="assets/img/portfolio/localhost.jpg" alt="localhost" width="700" class="noPadding">
+<img src="assets/img/portfolio/localhost.JPG" alt="localhost" width="700" class="noPadding">
   <figcaption>
     <em>Local Host  </em>
   </figcaption>
@@ -131,7 +131,7 @@ The flask application is connected to the Weaviate Client.
 Here the ```Weaviate nearText``` operator is used, to search for text that has the closest semantic meanings to the query that the user searched for. The response from the search query will include the closest objects in the climate policy class. The output response is then taken as the name, summary and details of the selected journal article.
 <br>
 <figure style="text-align: center">
-<img src="assets/img/portfolio/neartext.jpg" alt="NearText function" width="700" class="noPadding">
+<img src="assets/img/portfolio/neartext.JPG" alt="NearText function" width="700" class="noPadding">
   <figcaption>
     <em>NearText weaviate</em>
   </figcaption>
@@ -141,14 +141,14 @@ Here the ```Weaviate nearText``` operator is used, to search for text that has t
 Lastly the flask app front end and back end is created. Firstly the backend for POST requests from Weaviate is created and the search function to return the results from the client and render the page.<br />
 
 <figure style="text-align: center;">
-<img src="assets/img/portfolio/routehtml.jpg" alt="Populate Home page" width="700" class="noPadding"> <figcaption>
+<img src="assets/img/portfolio/routehtml.JPG" alt="Populate Home page" width="700" class="noPadding"> <figcaption>
     <em>Populate homepage</em>
   </figcaption>
 </figure>
 
 The index.html file
 <figure style="text-align: center;">
-<img src="assets/img/portfolio/index.jpg" alt="Home index page" width="700" class="noPadding"> <figcaption>
+<img src="assets/img/portfolio/index.JPG" alt="Home index page" width="700" class="noPadding"> <figcaption>
     <em>Home index page html</em>
   </figcaption>
 </figure>
@@ -156,7 +156,7 @@ The index.html file
 <br />
 The search results.html file
 <figure style="text-align: center;">
-<img src="assets/img/portfolio/searchresults.jpg" alt="Search results page" width="700" class="noPadding"> <figcaption>
+<img src="assets/img/portfolio/searchresults.JPG" alt="Search results page" width="700" class="noPadding"> <figcaption>
     <em>Search results page html</em>
   </figcaption>
 </figure>
@@ -165,7 +165,7 @@ The search results.html file
 
 The final website functionality
 <figure style="text-align: center;">
-<img src="assets/img/portfolio/coalemissions.jpg" alt="Search page" width="900" class="noPadding"> <figcaption>
+<img src="assets/img/portfolio/coalemissions.JPG" alt="Search page" width="900" class="noPadding"> <figcaption>
     <em>Home page</em>
   </figcaption>
 </figure>
@@ -174,7 +174,7 @@ The final website functionality
 
 With relative ease of use, I have created a fully functional vector embedded search engine, for any database files.
 <figure style="text-align: center;">
-<img src="assets/img/portfolio/coalsearch.jpg" alt="Search result page" width="1000" class="noPadding"> <figcaption>
+<img src="assets/img/portfolio/coalsearch.JPG" alt="Search result page" width="1000" class="noPadding"> <figcaption>
     <em>Search results page</em>
   </figcaption>
 </figure>
